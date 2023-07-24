@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form Elements </title>
+</head>
+
+<body>
+
+<form>
+
+	<label for="">Enter your username</label> <!-- For attribute used with input-->
+	<input type="text" name="uname" required>
+	
+	<br>
+	
+	<label for="">Enter your password</label>
+	<input type="text" name="pass">
+	
+	<!-- Above is how to create username and password -->
+	
+	<!-- Keep in mind all labels for forms are accompanied with a input, which has mult attr-->
+	
+	<br>
+	
+	<label> Gender: </label>
+	
+	<input type="radio" name="gender_select" value="Male">
+	<label> Male </label>
+	
+	<input type="radio" name="gender_select" value="Female"> <!-- Name must be the same, so that you can only select one choice in the radio buttons! -->
+	<label> Female </label>
+	
+	<!-- Above is how to create a radio selection, such that only one choice avail -->
+	
+	<h1> Select all items to go in your burrito! </h1>
+	<fieldset> <!-- Groups things together literally in a form, via a box -->
+	
+		<br>
+		
+		<input type="checkbox" name="c1" id="c1">
+		<label> Lettuce </label>
+		
+		<br>
+		
+		<input type="checkbox" name="c2" id="c2">
+		<label> Potato </label>
+		
+		<br>
+		
+		<input type="checkbox" name="c3" id="c3">
+		<label> Yam </label>
+		
+		<br>
+		
+		<input type="checkbox" name="c4" id="c4">
+		<label> Onion </label>
+		
+	</fieldset>
+	
+	<!-- Above is an example of a checkbox selection -->
+	
+	<label> Choose your favorite drink! </label>
+	<input type="color" name="flavor">
+	
+	<!-- ABove is an example of a color selection -->
+	
+	<label> Choose a file that is relevant: </label>
+	<input type="file" name="f1">
+	
+	<!-- Above is an example of a file selection -->
+	
+	<label for="dropdown"> How frequently do you use this site? </label>
+	<select id="dropdown"> <!-- Always make the id == for value of label -->
+		<option> Everyday </option>
+		<option> Once a week </option>
+		<option> Once a month </option>
+		<option> Once in a blue moon </option>
+	</select>
+
+	<!-- Above is an example of a dropdown -->
+	
+	<label> Enter your DOB </label>
+	<input type="date" name="bdate">
+	
+	<!-- Above is a calendar date selection -->
+	
+	<br>
+	
+	<h2><label> Suggestions </label></h2>
+	<textarea rows="5" cols="20"></textarea>
+	
+	<!-- Above is a text area -->
+	
+		<br>
+	
+	<input type="submit" name="submit" value="post"> <!-- Submit button must be within the "form" tag -->
+	
+	<!-- Above is an example of a submit button, using post attribute of 
+	
+	
+	<!-- Two attributes of a form below: -->
+	<!-- Action = where to send form and contains an address, Method = two attributes, get and post. -->
+	<!-- Get attribute gets all data and appends to url. Post attribute gets all data and will not post anything to url -->
+	
+</form>
+	
+</body>
+
+</html>
