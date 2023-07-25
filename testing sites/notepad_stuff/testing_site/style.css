@@ -1,6 +1,7 @@
 /* Using "style { }" would be considered using a tag selector */
-.logo_glyph {
+
+object {
 	
-	background-image: url();
+	pointer-events: none;
 	
 }

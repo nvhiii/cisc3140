@@ -1,0 +1,102 @@
+h1 {
+	
+	background-color: blue;
+	color: pink;
+	
+	/* example of a tag selector */
+	
+}
+
+#sh1 {
+	
+	background-color: lightblue;
+	color: yellow;
+	
+	/* example of a id selector, insert "#" and then the id name to specify style */
+	
+}
+
+.c1 {
+	
+	background-color: purple;
+	color: yellow;
+	font-family: arial;
+	font-size: 12px;
+	text-align: center;
+	border
+	
+	/* example of a class selector, insert "." and then the class name to specify style */
+	
+}
+
+#topbar {
+	
+	background-color: red;
+	color: white;
+	font-family: serif;
+	border: 3px dotted #000000;
+	
+}
+
+body {
+	width: 300px;
+	height: 200px;
+	background-image: url(monet_sunrise.jpg);
+	background-color: #cccccc;
+	opacity: 1;
+	
+	/* example of background in css */
+	
+}
+
+table, th, td {
+	
+	text-align: center;
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	width: 100%;
+	/*border-radius: 10px;*/
+	
+	/* radius doesn't work with collapse */
+	
+}
+
+tr:nth-child(odd) {
+	
+	background-color: orange;
+	
+}
+
+.c3 {
+	
+	border: 4px solid red;
+	
+}
+
+/* selector:nth-child() syntax is for functions */
+
+
+tr:hover {
+	
+	background-color: yellow;
+	opacity: 0.5;
+	
+}
+
+img {
+	
+	opacity: 0.5;
+	
+}
+
+img:hover {
+	
+	opacity: 1;
+	
+}
+
+input[type=password]:focus, input[type=password]:hover {
+	
+	background-color: lightblue;
+	
+}
