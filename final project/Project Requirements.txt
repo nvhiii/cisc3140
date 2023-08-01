@@ -1,0 +1,24 @@
+CISC 3140 Final Project Requirements
+
+- Goal: Create a website with HTML, CSS, JS, PHP and SQL
+
+Requirements:
+- The website should have some static webpages (home, contact us, about us, etc.)
+- Apply CSS rules to each of the pages of your website
+- The website MUST include use of table and div tags
+- Use JS to add some functionality to your website (eg: showing date, time, performing some simple calculations
+- The webspages must have some event attributes to highlight interactivity of your webpage
+	(keyboard focus, mouse focus, form focus, UI based focus, etc.)
+- The website must have AT LEAST a form (login pasge, new user registration, etc.)
+- Create a database that will store the values entered by the user
+
+Optional:
+- Compare a working login page. Don't let user in withut successfully logging into your system
+
+Deadline(s):
+
+Code - DUE 8/16/23
+
+Report Submission - DUE 8/16/23
+
+Presentation - DUE 8/16/23 or 8/17/23
