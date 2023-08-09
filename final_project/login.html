@@ -3,6 +3,7 @@
 
 <head>
 
+	<title> Login </title>
 	<link rel="stylesheet" type="text/css" href="final.css">
 
 </head>
@@ -14,7 +15,7 @@
 	
 	</header>
 
-	<form id="f1">
+	<form action="login.php" method="post" id="f1" >
 	
 		<label for="uname">Username: </label>
 		<input type="text" name="uname" id="uname"> <br> <br>
@@ -22,7 +23,8 @@
 		<label for="pwd">Password: </label>
 		<input type="password" name="pwd" id="pwd" required> <br> <br>
 	
-		<button onclick="login()" id="b1"> Login </button>
+		<!-- <button onclick="login()" id="b1"> Login </button> -->
+		<input type="submit" value="Login">
 	
 	<form>
 	

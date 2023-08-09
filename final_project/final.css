@@ -71,7 +71,7 @@ body {
 
 #h2 {
 	
-	padding: 150px;
+	padding: 100px;
 	text-align: center;
 	font-size: 25px;
 	
@@ -86,5 +86,16 @@ input[type=password]:focus, input[type=password]:hover {
 input[type=text]:focus, input[type=text]:hover {
 	
 	background-color: lightblue;
+	
+}
+
+#f2 {
+	
+    display: inline-block;
+	border: 1px solid #000000;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 	
 }
