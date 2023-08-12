@@ -1,29 +1,39 @@
 <?php
 
-	$nm = $_POST["name"];
+	// stuff needed to connect
+	
+	$serverName = "localhost";
+	$username = "root";
+	$password = "root";
+	$dbName = "users";
+	
+	// Create connection
+
+	$conn = new mysqli($serverName, $username, $password, $dbName);
+	
+	// Check connection
+	
+	if ($conn->connect_error) {
+		
+		die ("Connection failed: " . $conn->connect_error);
+	
+	}
+	
+	// Assign php var to html form vals for 'personal' table gotten via POST
+
+	$nm = $_POST["personName"];
 	$em = $_POST["email"];
 	$g = $_POST["gender"];
 	$ag = $_POST["age"];
 	
-	// The below is user/pwd, necessary for future login.
+	$sql = "INSERT INTO personal (Name, Email, Gender, Age) VALUES ('$nm', '$em', '$g', '$ag')";
+	INSERT INTO `personal`(`Name`, `Email`, `Gender`, `Age`) VALUES ('$nm', '$em', '$g', '$ag');
 	
-	// add another insert stmnt for another table
+	// The below is user/pwd, necessary for future login.
 	
 	$un = $_POST["uname"];
 	$pass = $_POST["pwd"];
 	
-	// MySQL stmnt that inserts the values into the db, cool functionality
+	$sql = "INSERT INTO login (Username, Password) VALUES ('$un', '$pass')";
 	
-	// requires conn and sql
-	
-	INSERT INTO personal (Name, Email, Gender, Age) VALUES ("", "$em", "", "");
-	
-	/* Have to change all inputs, and change prompts on register page.
-	
-	 Will Have to Implements A form consisting of Radio (Gender), and Text box for Age, etc.
-	 
-	*/
-	
-	 
-
 ?>
