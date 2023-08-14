@@ -42,5 +42,7 @@
 	
 	$conn->query("INSERT INTO login (Username, Password) VALUES ('$un', '$pass')");
 	
+	// use multi query
+	
 	
 ?>
