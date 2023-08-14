@@ -21,19 +21,31 @@
 	
 	// Assign php var to html form vals for 'personal' table gotten via POST
 
-	$nm = $_POST["personName"];
+	// these values all use the name attr
+
+	$lnm = $_POST["lastName"];
+	$fnm = $_POST["firstName"];
+
 	$em = $_POST["email"];
+	
 	$g = $_POST["gender"];
+	
 	$ag = $_POST["age"];
 	
-	$sql = "INSERT INTO personal (Name, Email, Gender, Age) VALUES ('$nm', '$em', '$g', '$ag')";
-	INSERT INTO `personal`(`Name`, `Email`, `Gender`, `Age`) VALUES ('$nm', '$em', '$g', '$ag');
+	$sq = $_POST["answerSQ"];
+	
+	$sql = INSERT INTO personal (lastName, firstName, email, gender, age, security) VALUES ("$lnm", "$fnm", "$em", "$g", "$ag", "$sq");
+	
+	header("location: http://localhost:8888/final_project/success.html");
 	
 	// The below is user/pwd, necessary for future login.
+	
+	/*
 	
 	$un = $_POST["uname"];
 	$pass = $_POST["pwd"];
 	
-	$sql = "INSERT INTO login (Username, Password) VALUES ('$un', '$pass')";
+	$sql = INSERT INTO login (Username, Password) VALUES ('$un', '$pass');
 	
+	*/
 ?>

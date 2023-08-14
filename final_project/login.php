@@ -24,6 +24,11 @@
 	
 	$sql = "SELECT * FROM login WHERE Username='$un'";
 	
+	// If the user does not exist, prompt register page
+	// Otherwise, if there is a user match, then make sure the corresponding pwd matches
+	// if pass matches to the one in db, then allow login
+	// if pass does not match, prompt security question or email for reset pwd
+	
 	$a = "admin";
 	$pas = "admin123";
 	
