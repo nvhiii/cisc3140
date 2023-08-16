@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  
+  <title>Minimalistic Website</title>
+
+</head>
+
+<body onload="liveTime()">
+
+	<header class="navbar">
+  
+		<div class="left-side">
+		
+			<a href="index.html" class="logo"> <img src="hhhh.png"/></a>
+		  
+			<div class="dropdown">
+				<button class="dropdown-button">Products</button>
+				<div class="dropdown-content">
+					<a href="topic_upload.html">Topic Uploads</a>
+					<a href="store.html">Store</a>
+					<a href="subscription.html">Subscription</a>
+				</div>
+			</div>
+		  
+			<div class="dropdown">
+				<button class="dropdown-button">About</button>
+				<div class="dropdown-content">
+					<a href="contact.html">Contact us</a>
+					<a href="about_us.html">About us</a>
+					<a href="partnership.html">Partnerships</a>
+				</div>
+			</div>
+      
+		</div>
+    
+    <div class="empty-middle"></div> <!-- Empty middle section -->
+    
+		<div class="right-side">
+			<div class="search-bar">
+				<input type="text" id="search" placeholder="Search" />
+				<span class="forward-slash">/</span>
+				<span class="search-icon">🔍</span>
+			</div>
+      
+			<div class="login-register">
+				<a href="login.html" class="login-button">Login</a>
+				<a href="register.html" class="register-button">Register</a>
+			</div>
+      
+		</div>
+	
+	</header>
+  
+	<div class="live-clock">
+		<h2 id="lt">12:00</h2>
+	</div>
+  
+	<div class="heading">
+  
+		<h1> Crafting Connections, Fueling Passions. </h1>
+		
+		<div class="email-box">
+		
+			<form action="register.html" method="GET">
+			
+				<input type="email" name="email" id="email" placeholder="Email address">
+				<button id="validateButton" onclick="">Sign up for Hobbyist</button>
+				
+			</form>
+			
+		</div>
+	
+	</div>
+  
+</body>
+</html>

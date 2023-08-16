@@ -3,71 +3,59 @@
 
 <head>
 
-	<title> Register </title>
-	
-	<link rel="stylesheet" type="text/css" href="final.css">
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
 </head>
-<body>
 
-	<form action="register.php" method="post">
+<body id="b2">
+
+	<form action="register.php" method="post" id="b3">
 	
-	
-		<label for="firstName">First Name: </label>
-		<input type="text" name="firstName" id="firstName" required>
-		
-		<label for="lastName">Last Name: </label>
-		<input type="text" name="lastName" id="lastName" required> <br> <br>
-	
-		<label for="email">Email: </label>
-		<input type="email" name="email" id="email" required> <br> <br>
-		
-		<label for="gender">Select your gender: </label> <br>	
-		
-			<input type="radio" name="gender" id="male" value="Male">
-			<label for="male">Male<br>
-			
-			<input type="radio" name="gender" id="female" value="Female">
-			<label for="female">Female<br>
-			
-			<input type="radio" name="gender" id="other" value="Other">
-			<label for="other">Other<br>
-			
-			<input type="radio" name="gender" id="pfn" value="PFN">
-			<label for="pfn">Prefer not to say<br>
-		
-		<label for="age">Age: </label>
-		<input type="number" name="age" id="age"> <br> <br>
-		
-		<label for="uname">Username: </label>
-		<input type="text" name="uname" id="uname"> <br> <br>
-		
-		<label for="pwd">Password: </label>
-		<input type="password" name="pwd" id="pwd" required> <br> <br>
-		
-		<label for="sq">Security Question: </label>
+		<label for="firstName">First Name:</label>
+		<input type="text" name="firstName" id="b3" required>
+
+		<label for="lastName">Last Name:</label>
+		<input type="text" name="lastName" id="b3" required>
+
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="b3" required>
+
+		<label>Select your gender:</label>
+		<input type="radio" name="gender" id="male" value="Male">
+		<label for="male">Male</label>
+		<input type="radio" name="gender" id="female" value="Female">
+		<label for="female">Female</label>
+		<input type="radio" name="gender" id="other" value="Other">
+		<label for="other">Other</label>
+		<input type="radio" name="gender" id="pfn" value="PFN">
+		<label for="pfn">Prefer not to say</label>
+
+		<label for="age">Age:</label>
+		<input type="number" name="age" id="b3">
+
+		<label for="uname">Username:</label>
+		<input type="text" name="uname" id="b3">
+
+		<label for="pwd">Password:</label>
+		<input type="password" name="pwd" id="b3" required>
+
+		<label for="sq">Security Question:</label>
 		<select id="sq">
-		
-			<option>What is your father's nickname? </option>
-			<option>What is your mother's maiden name? </option>
-			<option>What is your childhood home? </option>
-			<option>What is your first cat's name? </option>
-			
+			<option>What is your father's nickname?</option>
+			<option>What is your mother's maiden name?</option>
+			<option>What is your childhood home?</option>
+			<option>What is your first cat's name?</option>
 		</select>
-		
-		<br>
-		
-		<label for="answerSQ">Security answer: </label>
-		<input type="text" name="answerSQ" id="answerSQ">
 
-		<br> <br>
-		
-		<!-- <button onclick="login()" id="b1"> Login </button> -->
+		<label for="answerSQ">Security answer:</label>
+		<input type="text" name="answerSQ" id="b3">
+
 		<input type="submit" value="Welcome fellow Hobbyist!">
-		
 	</form>
 
 </body>
+
 </html>

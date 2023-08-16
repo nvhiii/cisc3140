@@ -1,0 +1,350 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #222; /* Dark theme background color */
+  background-image: url("splash.png");
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* Keep the navbar transparent */
+  color: white;
+  padding: 10px 20px; /* Adjusted padding for more spacing */
+  margin: 10px; /* Add margin for spacing from the edges */
+}
+
+/* Container for left side */
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the spacing between logo and dropdowns */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Change background color of dropdown options */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white; /* Change the background color to white */
+  padding: 10px;
+  min-width: 150px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for a visual lift */
+  border-radius: 5px;
+}
+
+/* Change to vertical alignment */
+.dropdown-content a {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: gray;
+  transition: color 0.3s ease; /* Add transition for font color */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: blue; /* Font color on hover */
+}
+
+/* Container for right side */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* Pushes the right-side content to the right */
+}
+
+.search-bar {
+  position: relative;
+}
+
+#search {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+}
+
+.login-register {
+  display: flex-right;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-button {
+  background-color: transparent; /* Set background to transparent */
+  color: white;
+  padding: 5px 10px;
+  border: none; /* Remove border from login button */
+  border-radius: 8px; /* Rounded edges for the buttons */
+  text-decoration: none;
+}
+
+.register-button {
+  background-color: transparent; /* Set background to transparent */
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid white; /* Add border to register button */
+  border-radius: 8px; /* Rounded edges for the buttons */
+  text-decoration: none;
+}
+
+/* Align the forward slash and search icon */
+.forward-slash {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* Add some padding to the left and right of the search input */
+#search {
+  padding-left: 40px; /* To accommodate the search icon and forward slash */
+  padding-right: 40px; /* To accommodate the search icon and forward slash */
+}
+
+#lt {
+  color: white; /* Set the font color to white */
+  font-size: 72px; /* Adjust the font size as needed */
+  text-align: center; /* Center the live time horizontally */
+  margin-top: 100px; /* Increase the top margin for more padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  text-align: left;
+  margin-left: 40px; /* Adjust the margin as needed */
+  margin-right: calc(33.33% - 40px); /* Right margin as 1/3 of the page minus the left margin */
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: 36px; /* Adjust the font size as needed */
+  color: white; /* Set the font color to white */
+}
+
+/* Add transitions for login and register buttons */
+.login-button,
+.register-button {
+  transition: opacity 0.3s ease; /* Add transition property */
+}
+
+/* Change opacity on hover for login and register buttons */
+.login-button:hover,
+.register-button:hover {
+  opacity: 0.8; /* You can adjust the opacity value as needed */
+}
+
+/* Add transition for dropdown button */
+.dropdown-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Add transition property */
+}
+
+/* Change opacity on hover for dropdown button */
+.dropdown-button:hover {
+  opacity: 0.8; /* You can adjust the opacity value as needed */
+}
+
+/* Style the email button */
+#validateButton {
+  background-color: #001f3f; /* Dark navy color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px; /* Rounded edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Add transitions */
+}
+
+#validateButton:hover {
+  background-color: #003366; /* Slightly darker shade on hover */
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Style the email input */
+#email {
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 8px; /* Rounded edges */
+  width: 250px; /* Adjust width as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  transition: border-color 0.3s ease; /* Add transition for border color */
+}
+
+#email:focus {
+  border-color: #001f3f; /* Change border color on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Style for the email input and button */
+.email-box {
+  margin-top: 20px; /* Adjust margin-top as needed */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#b2 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#b3 {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc; /* Adjusted border width */
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#b3 label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#b3 input[type="text"],
+#b3 input[type="email"],
+#b3 input[type="password"],
+#b3 input[type="number"],
+#b3 select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+#b3 input[type="radio"] {
+  margin-right: 5px;
+}
+
+#b3 select {
+  margin-top: 5px;
+}
+
+#b3 input[type="submit"] {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#b3 input[type="submit"]:hover {
+  background-color: #003366;
+  opacity: 0.8;
+}
+
+#a16 {
+	color: white;
+	
+}
+
+/* Add these CSS rules to center the form */
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Make the container take the full viewport height */
+}
+
+.topic-form {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #222;
+}
+
+.subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.subscription-table th,
+.subscription-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.subscription-table th {
+  background-color: #222;
+  color: white;
+}
+
+.subscription-table td:first-child {
+  text-align: left;
+}
+
+.subscription-table td:last-child {
+  font-weight: bold;
+  color: #001f3f;
+}
+
+.subscription-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

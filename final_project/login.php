@@ -27,7 +27,7 @@
 	
 	if ($result === $pwd) {
 		
-		header("location: http://localhost:8888/final_project/final.html");
+		header("location: http://localhost:8888/final_project/logged_in.html");
 		exit();
 	
 	} elseif ($result === NULL) {
@@ -37,8 +37,11 @@
 		
 	} else {
 		
-		// send pop up "Login Failed. Incorrect Password."
-		// if pass failed == 3, header(security page w/ reset password link);
+		for ($x = 0; $x <= 3; x++) {
+			
+			echo '<script>alert("Failed to login. Please answer the following security question or check email to reset password")';
+			
+		}
 		exit();
 		
 	}
