@@ -30,9 +30,15 @@
 	
 	$ag = $_POST["age"];
 	
+	$conn->query("INSERT INTO personal (lastName, firstName, email, gender, age) VALUES ('$lnm', '$fnm', '$em', '$g', '$ag')");
+	
+	// below info for table for security q
+	
 	$asq = $_POST["answerSQ"];
 	
-	$conn->query("INSERT INTO personal (lastName, firstName, email, gender, age, security) VALUES ('$lnm', '$fnm', '$em', '$g', '$ag', '$asq')");
+	$sq = $_POST["sq"];
+	
+	$conn->query("INSERT INTO security (securityQ, securityANS) VALUES ('$sq', '$asq')"); // dunno whats up, its not getting data
 	
 	// The below is user/pwd, necessary for future login.
 	
@@ -42,7 +48,8 @@
 	
 	$conn->query("INSERT INTO login (Username, Password) VALUES ('$un', '$pass')");
 	
-	// use multi query
+	header("Location: http://localhost:8888/final_project/login.html");
 	
+	$conn->close();
 	
 ?>

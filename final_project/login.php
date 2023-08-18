@@ -1,76 +1,64 @@
 <?php
 
-	// stuff needed to connect
-	
-	$serverName = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbName = "users";
-	
-	// Create connection
+session_start();
 
-	$conn = new mysqli($serverName, $username, $password, $dbName);
+// stuff needed to connect
+
+$serverName = "localhost";
+$username = "root";
+$password = "root";
+$dbName = "users";
 	
-	// Check connection
+// Create connection
+
+$conn = new mysqli($serverName, $username, $password, $dbName);
 	
-	if ($conn->connect_error) {
+// Check connection
+	
+if ($conn->connect_error) {
 		
-		die ("Connection failed: " . $conn->connect_error);
+	die ("Connection failed: " . $conn->connect_error);
 	
-	}
+}
 	
-	$un = $_POST["uname"];
-	$pwd = $_POST["pwd"];
+$un = $_POST["uname"];
+$pwd = $_POST["pwd"];
+
+$sql = "SELECT Password FROM login WHERE Username='$un'";
+$result = $conn->query($sql);
 	
-	$sql = "SELECT Password FROM login WHERE Username='$un'";
-	$result = $conn->query($sql);
-	
-	if ($result === $pwd) {
+if ($result->num_rows == 1) {
 		
-		header("location: http://localhost:8888/final_project/logged_in.html");
-		exit();
-	
-	} elseif ($result === NULL) {
-		
-		header("location: http://localhost:8888/final_project/register.html");
-		exit();
-		
-	} else {
-		
-		for ($x = 0; $x <= 3; x++) {
+	$row = $result->fetch_assoc();
+	$plainTextPasswordFromDB = $row["Password"];
+
+	// Compare the entered password with the password from the database
 			
-			echo '<script>alert("Failed to login. Please answer the following security question or check email to reset password")';
-			
-		}
-		exit();
+	if ($pwd === $plainTextPasswordFromDB) {
+				
+		// Set user as logged in using session
+        $_SESSION["logged_in"] = true;
+        $_SESSION["username"] = $un;
 		
-	}
-	
-	// only select stmnts can use this sql syntax
-	
+		header("Location: second.php");
 
-	// If the user does not exist, prompt register page
-	// Otherwise, if there is a user match, then make sure the corresponding pwd matches
-	// if pass matches to the one in db, then allow login
-	// if pass does not match, prompt security question or email for reset pwd
-
-	/*
-
-	$pas = "admin123";
-	
-	if (($un == $a) && ($pwd == $pas)) {
-		
-		header("location: http://localhost:8888/final_project/success.html");
-		exit();
-		
+        // Redirect to the logged-in page
+        header("Location: http://localhost:8888/final_project/logged_in.html");
+		header("Location: http://localhost:8888/final_project/logged_in.php");
+        exit;
+				
 	} else {
-		
-		echo "Access Denied!";
+				
+		echo "<script>alert('Invalid password'); window.location.href = 'http://localhost:8888/final_project/login.html';</script>";
+		exit;
 		
 	}
-	
-	$conn->close();
-	
-	*/
+		
+} else {
+    echo "<script>alert('Username not found. Please create an account.'); window.location.href = 'http://localhost:8888/final_project/register.html';</script>";
+    exit;
+}
 
+$conn->close();
+	
 ?>

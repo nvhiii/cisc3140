@@ -2,43 +2,49 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Login</title>
-  
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<title>Login</title>
 </head>
+
 <body>
 
-  <header class="navbar">
-  
-    <div class="left-side">
-      <a href="index.html" class="logo"><img src="hhhh.png"/></a>
+	<div id="head-login">
+	
+        <a href="index.html" id="l1"><img src="hhhh.png"/></a>
+		
     </div>
 	
-    <div class="right-side">
-      <a href="register.html" class="sign-in-button">New User?</a>
-    </div>
+	<div id="head-text">
 	
-  </header>
-  
-  <div id="b2">
+		<h1>Sign in</h1>
+		
+	</div>
 
-	  <form action="login.php" method="post" id="b3">
-	  
-		<label for="uname">Username:</label>
-		<input type="text" name="uname" id="b3"> <br> <br>
+	<div id="login-container">
 
-		<label for="pwd">Password:</label>
-		<input type="password" name="pwd" id="b3" required> <br> <br>
+		<form action="login.php" method="post" id="login-form">
+			<label for="uname">Username:</label>
+			<input type="text" name="uname" id="login-username" class="input-field"> <br> <br>
 
-		<input type="submit" value="Login">
+			<label for="pwd">Password:</label>
+			<input type="password" name="pwd" id="login-password" class="input-field" required> <br> <br>
+
+			<input type="submit" value="Login" class="input-field">
+		</form>
 		
 		<br>
 		
-		<a href="register.html" align="center" id="a16">New User?</a>
-	  </form>
-  
+		<div id="new-user-box">
+		
+			<a href="register.html" align="center" id="new-user-link" class="input-field">New Here?</a>
+		
+		</div>
+		
+	</div>
+	
 </body>
+
 </html>

@@ -1,3 +1,58 @@
+<?php
+
+session_start();
+
+// stuff needed to connect
+
+$serverName = "localhost";
+$username = "root";
+$password = "root";
+$dbName = "users";
+	
+// Create connection
+
+$conn = new mysqli($serverName, $username, $password, $dbName);
+	
+// Check connection
+	
+if ($conn->connect_error) {
+		
+	die ("Connection failed: " . $conn->connect_error);
+	
+}
+	
+$un = $_POST["uname"];
+$pwd = $_POST["pwd"];
+
+$sql = "SELECT Password FROM login WHERE Username='$un'";
+$result = $conn->query($sql);
+	
+if ($result->num_rows == 1) {
+		
+	$row = $result->fetch_assoc();
+	$plainTextPasswordFromDB = $row["Password"];
+
+	// Compare the entered password with the password from the database
+			
+	if ($pwd === $plainTextPasswordFromDB) {
+				
+		// Set user as logged in using session
+        $_SESSION["logged_in"] = true;
+        $_SESSION["username"] = $un;
+
+        // Redirect to the logged-in page
+        header("Location: http://localhost:8888/final_project/index.html");
+        exit;
+				
+	}
+	
+}
+
+$loggedIn = isset($_SESSION["logged_in"]) && $_SESSION["logged_in"];
+$loggedInUsername = isset($_SESSION["username"]) ? $_SESSION["username"] : '';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +91,6 @@
 					<a href="about_us.php">About us</a>
 					<a href="partnership.php">Partnerships</a>
 					<a href="topic_upload.php">Topic Uploads</a>
-					<a href="news.php">News</a>
 				</div>
 			</div>
       
@@ -50,11 +104,17 @@
 				<span class="forward-slash">/</span>
 				<span class="search-icon">🔍</span>
 			</div>
-      
+			
 			<div class="login-register">
-				<a href="login.html" class="login-button">Login</a>
-				<a href="register.html" class="register-button">Register</a>
-			</div>
+				<?php if ($loggedIn) : ?>
+					<!-- Show logout button if logged in -->
+					<a href="logout.php" class="logout-button">Logout</a>
+				<?php else : ?>
+					<!-- Show login and register buttons if not logged in -->
+					<a href="login.html" class="login-button">Login</a>
+					<a href="register.html" class="register-button">Register</a>
+				<?php endif; ?>
+			</div>			
       
 		</div>
 	
@@ -83,3 +143,10 @@
   
 </body>
 </html>
+
+<?php
+$conn->close();
+?>
+
+
+
